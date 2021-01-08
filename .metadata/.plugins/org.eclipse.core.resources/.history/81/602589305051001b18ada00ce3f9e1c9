@@ -1,0 +1,14 @@
+version: '3.7'
+    
+services:
+
+  postgres_dsdeliver:
+    image: postgres
+    environment:
+      POSTGRES_DB: dsdeliver
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234567
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/dsdeliver-database:/var/lib/postgresql/data
